@@ -2,6 +2,7 @@ import React from 'react'
 import Avatar from './Avatar'
 import Email from './Email'
 import Name from './Name'
+import Status from './Status'
 
 function User({ user }) {
 
@@ -19,8 +20,8 @@ function User({ user }) {
                     </div>
                 </div>
             </td>
-            <td>{user.status}</td>
-            <td>{user.Access}</td>
+            <td><Status status={user.status} /></td>
+            <td>{user.role}</td>
         </tr>
     )
 }

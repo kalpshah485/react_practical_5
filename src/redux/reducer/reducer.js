@@ -7,7 +7,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/1-image.jpg",
             status: "Active",
-            Access: "Owner"
+            role: "Owner"
         },
         {
             first_name: 'John',
@@ -15,7 +15,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/2-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         },
         {
             first_name: 'John',
@@ -23,7 +23,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/3-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         },
         {
             first_name: 'John',
@@ -31,7 +31,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/4-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         },
         {
             first_name: 'John',
@@ -39,7 +39,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/5-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         },
         {
             first_name: 'John',
@@ -47,7 +47,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/6-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         },
         {
             first_name: 'John',
@@ -55,7 +55,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/7-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         },
         {
             first_name: 'John',
@@ -63,7 +63,7 @@ var initialState = {
             email: 'john@example.com',
             avatar: "https://reqres.in/img/faces/8-image.jpg",
             status: "Inactive",
-            Access: "Read"
+            role: "Read"
         }
     ]
 };
