@@ -1,4 +1,7 @@
 import React from 'react'
+import Avatar from './Avatar'
+import Email from './Email'
+import Name from './Name'
 
 function User({ user }) {
 
@@ -7,14 +10,12 @@ function User({ user }) {
             <td>
                 <div className="row">
                     <div className="col-2">
-                        {/* <Avatar /> */}
-                        <img className="img-radius" src={user.avatar} alt="" />
+                        <Avatar avatar={user.avatar} />
+
                     </div>
                     <div className="col m-auto">
-                        {/* <Name /> */}
-                        {/* <Email /> */}
-                        <div>{user.first_name + " " + user.last_name}</div>
-                        <div className="text-muted">{user.email}</div>
+                        <Name first_name={user.first_name} last_name={user.last_name} />
+                        <Email email={user.email} />
                     </div>
                 </div>
             </td>
