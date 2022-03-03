@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import User from './User';
 
 function UserList() {
     const users = useSelector(state => state.reducer.users);
@@ -19,21 +20,7 @@ function UserList() {
                             {
                                 users.map((user, index) => {
                                     return (
-                                        <tr key={index}>
-                                            <td>
-                                                <div className="row">
-                                                    <div className="col-2">
-                                                        <img className="img-radius" src={user.avatar} alt="" />
-                                                    </div>
-                                                    <div className="col m-auto">
-                                                        <div>{user.first_name + " " + user.last_name}</div>
-                                                        <div className="text-muted">{user.email}</div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>{user.status}</td>
-                                            <td>{user.Access}</td>
-                                        </tr>
+                                        <User key={index} user={user} />
                                     )
                                 })
                             }
