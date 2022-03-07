@@ -4,3 +4,6 @@
 // export const loaded = () => {
 //     return {type: 'LOADED',task: false}
 // }
+// export const deleteUser = () => {
+//     return {type: 'DELETE_USER',payload: users}
+// }
