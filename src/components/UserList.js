@@ -1,4 +1,5 @@
 import React from 'react';
+import HoverUser from './HoverUser';
 import UserTable from './UserTable';
 function UserList() {
     return (
@@ -7,8 +8,8 @@ function UserList() {
                 <div className="col-8">
                     <UserTable />
                 </div>
-                <div className="col-9">
-                                        
+                <div className="col-4">
+                    <HoverUser />                    
                 </div>
             </div>
         </>
