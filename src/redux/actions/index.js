@@ -7,3 +7,6 @@
 // export const deleteUser = () => {
 //     return {type: 'DELETE_USER',payload: users}
 // }
+export const addSelectedUser = (user) => {
+    return {type: 'ADD_SELECTED_USER',payload: user}
+}

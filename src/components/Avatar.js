@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Avatar({ avatar }) {
+function Avatar({ avatar,size }) {
     return (
-        <img className="img-radius" src={avatar} alt="" />
+        <img className={size} src={avatar} alt="" />
     )
 }
 

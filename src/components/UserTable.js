@@ -26,4 +26,4 @@ function UserTable() {
     )
 }
 
-export default UserTable
+export default UserTable;
