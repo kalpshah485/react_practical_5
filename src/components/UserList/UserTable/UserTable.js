@@ -15,9 +15,9 @@ function UserTable() {
             </thead>
             <tbody>
                 {
-                    users.map((user, index) => {
+                    users.map((user) => {
                         return (
-                            <User key={index} user={user} />
+                            <User key={user.id} user={user} />
                         )
                     })
                 }

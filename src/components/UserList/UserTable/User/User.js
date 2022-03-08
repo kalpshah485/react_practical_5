@@ -1,5 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import DeleteBtn from './Btns/DeleteBtn'
+import LockBtn from './Btns/LockBtn'
 import { addSelectedUser } from '../../../../redux/actions'
 import Avatar from '../../Avatar/Avatar'
 import Email from '../../Email/Email'
@@ -23,7 +25,16 @@ function User({ user }) {
                 </div>
             </td>
             <td><Status status={user.status} /></td>
-            <td><Role role={user.role} /></td>
+            <td>
+                <div className="row">
+                    <div className="col">
+                        <Role role={user.role} />
+                    </div>
+                    <div className="col text-muted">
+                        {user.role === 'Owner'? <LockBtn /> : <DeleteBtn user={user} /> }
+                    </div>
+                </div>
+            </td>
         </tr>
     )
 }
