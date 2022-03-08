@@ -1,31 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import User from './User';
-
+import UserTable from './UserTable';
 function UserList() {
-    const users = useSelector(state => state.reducer.users);
     return (
         <>
             <div className="row m-0">
                 <div className="col-8">
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th>Access</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                users.map((user, index) => {
-                                    return (
-                                        <User key={index} user={user} />
-                                    )
-                                })
-                            }
-                        </tbody>
-                    </table>
+                    <UserTable />
+                </div>
+                <div className="col-9">
+                                        
                 </div>
             </div>
         </>
