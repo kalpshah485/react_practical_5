@@ -4,7 +4,13 @@ import RoleDropDown from './RoleDropDown'
 
 function Role({ user }) {
   if (user.role === "Owner") {
-    return (user.role);
+    return (
+      <small>
+        <strong>
+          {user.role}
+        </strong>
+      </small>
+    );
   } else {
     return (<RoleDropDown user={user} />);
   }

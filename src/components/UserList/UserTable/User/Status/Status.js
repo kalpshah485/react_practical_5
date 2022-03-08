@@ -1,10 +1,15 @@
 import React from 'react';
 import StatusDropDown from './StatusDropDown';
 
-function Status({user}) {
+function Status({ user }) {
     if (user.status === "Active") {
-        return <div>{user.status}</div>
-    }else {
+        return (
+            <div className="text-success">
+                <small>
+                    {user.status}
+                </small>
+            </div>);
+    } else {
         return <StatusDropDown user={user} />
     }
 }

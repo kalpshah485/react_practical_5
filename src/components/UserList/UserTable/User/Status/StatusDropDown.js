@@ -7,11 +7,25 @@ function StatusDropDown({ user }) {
     return (
         <div className="dropdown">
             <button className="btn btn-white dropdown-toggle" type="button" id="statusDropDown" data-bs-toggle="dropdown" aria-expanded="false">
-                {user.status}
+                <small>
+                    {user.status}
+                </small>
             </button>
             <ul className="dropdown-menu" aria-labelledby="statusDropDown">
-                <li><div className="dropdown-item" onClick={() => dispatch(updateStatus(user,"Active"))}>Active</div></li>
-                <li><div className="dropdown-item" onClick={() => dispatch(updateStatus(user,"Inactive"))}>Inactive</div></li>
+                <li>
+                    <div className="dropdown-item" onClick={() => dispatch(updateStatus(user, "Active"))}>
+                        <small>
+                            Active
+                        </small>
+                    </div>
+                </li>
+                <li>
+                    <div className="dropdown-item" onClick={() => dispatch(updateStatus(user, "Inactive"))}>
+                        <small>
+                            Inactive
+                        </small>
+                    </div>
+                </li>
             </ul>
         </div>
     )

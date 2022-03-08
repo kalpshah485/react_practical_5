@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 function UserTable() {
     const users = useSelector(state => state.reducer.users);
     return (
-        <table className="table">
+        <table className="table table-borderless mb-0">
             <thead>
                 <tr>
                     <th>Name</th>

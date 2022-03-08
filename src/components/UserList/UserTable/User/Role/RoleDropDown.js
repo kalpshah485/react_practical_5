@@ -7,11 +7,25 @@ function RoleDropDown({ user }) {
   return (
     <div className="dropdown">
       <button className="btn btn-white dropdown-toggle" type="button" id="roleDropDown" data-bs-toggle="dropdown" aria-expanded="false">
-        {user.role}
+        <small>
+          {user.role}
+        </small>
       </button>
       <ul className="dropdown-menu" aria-labelledby="roleDropDown">
-        <li><div className="dropdown-item" onClick={() => dispatch(updateRole(user,"Read"))}>Read</div></li>
-        <li><div className="dropdown-item" onClick={() => dispatch(updateRole(user,"Manage"))}>Manager</div></li>
+        <li>
+          <div className="dropdown-item" onClick={() => dispatch(updateRole(user, "Read"))}>
+            <small>
+              Read
+            </small>
+          </div>
+        </li>
+        <li>
+          <div className="dropdown-item" onClick={() => dispatch(updateRole(user, "Manager"))}>
+            <small>
+              Manager
+            </small>
+          </div>
+        </li>
       </ul>
     </div>
   )
