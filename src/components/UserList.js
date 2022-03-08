@@ -7,7 +7,7 @@ function UserList() {
     return (
         <>
             <div className="row m-0">
-                <div className="col-9">
+                <div className="col-8">
                     <table className="table">
                         <thead>
                             <tr>
