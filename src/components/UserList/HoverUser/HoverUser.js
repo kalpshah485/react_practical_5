@@ -28,8 +28,8 @@ function HoverUser() {
                         <div className="plan-status">
                             Plan Uses:
                         </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div className="progress">
+                            <div className="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div className="row pt-3">
                             <div className="col">
@@ -52,8 +52,14 @@ function HoverUser() {
     } else {
         return (
             <div className="hover-container">
-                <div className="card hover-card shadow-lg p-3 mb-5 bg-body rounded">
-
+                <div className="card hover-card shadow-lg p-3 mb-5 bg-body">
+                <div className="card-body">
+                        <h4 className="card-title initial-msg">
+                            Please Hover On <br /> 
+                            the User to see <br />
+                            User's Full Information.
+                        </h4>
+                    </div>
                 </div>
             </div>
         )

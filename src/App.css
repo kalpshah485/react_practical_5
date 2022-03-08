@@ -56,3 +56,10 @@
     background-color: #feb23e;
     width: 50%;
 }
+.dropdown-item {
+    cursor: pointer;
+}
+.initial-msg {
+    position: relative;
+    top: 15vh;
+}
