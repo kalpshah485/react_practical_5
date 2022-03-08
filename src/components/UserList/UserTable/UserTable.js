@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User';
+import User from './User/User';
 import { useSelector } from 'react-redux';
 
 function UserTable() {

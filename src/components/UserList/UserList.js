@@ -1,6 +1,6 @@
 import React from 'react';
-import HoverUser from './HoverUser';
-import UserTable from './UserTable';
+import HoverUser from './HoverUser/HoverUser';
+import UserTable from './UserTable/UserTable';
 function UserList() {
     return (
         <>
