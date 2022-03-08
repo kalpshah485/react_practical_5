@@ -35,13 +35,17 @@ function HoverUser() {
                             <div className="col">
                                 <h2>2000</h2>
                                 <p className="text-muted">
+                                    <small>
                                         clicks reviewed
+                                    </small>
                                 </p>
                             </div>
                             <div className="col">
-                                <h2>2000</h2>
+                                <h2>5000</h2>
                                 <p className="text-muted">
-                                    Monthly clicks    
+                                    <small>
+                                        Monthly clicks
+                                    </small>
                                 </p>
                             </div>
                         </div>
@@ -53,9 +57,9 @@ function HoverUser() {
         return (
             <div className="hover-container">
                 <div className="card hover-card shadow-lg p-3 mb-5 bg-body">
-                <div className="card-body">
+                    <div className="card-body">
                         <h4 className="card-title initial-msg">
-                            Please Hover On <br /> 
+                            Please Hover On <br />
                             the User to see <br />
                             User's Full Information.
                         </h4>

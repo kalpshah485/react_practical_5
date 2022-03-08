@@ -5,7 +5,6 @@ import { deleteUser } from '../../../../../redux/actions';
 
 function DeleteBtn({ user }) {
     const dispatch = useDispatch();
-    console.log(user);
   return (
     <Trash2 onClick={() => dispatch(deleteUser(user.id))} style={{cursor: 'pointer'}} />
   )

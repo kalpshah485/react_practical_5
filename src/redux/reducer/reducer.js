@@ -55,7 +55,7 @@ var initialState = {
             email: 'john6@example.com',
             avatar: "https://reqres.in/img/faces/6-image.jpg",
             status: "Inactive",
-            role: "Read"
+            role: "Manager"
         },
         {
             id: uuidv4(),
@@ -74,25 +74,79 @@ var initialState = {
             avatar: "https://reqres.in/img/faces/8-image.jpg",
             status: "Inactive",
             role: "Read"
+        },
+        {
+            id: uuidv4(),
+            first_name: 'John9',
+            last_name: 'Wick9',
+            email: 'john9@example.com',
+            avatar: "https://reqres.in/img/faces/9-image.jpg",
+            status: "Inactive",
+            role: "Read"
+        },
+        {
+            id: uuidv4(),
+            first_name: 'John10',
+            last_name: 'Wick10',
+            email: 'john10@example.com',
+            avatar: "https://reqres.in/img/faces/10-image.jpg",
+            status: "Inactive",
+            role: "Read"
+        },
+        {
+            id: uuidv4(),
+            first_name: 'John11',
+            last_name: 'Wick11',
+            email: 'john11@example.com',
+            avatar: "https://reqres.in/img/faces/11-image.jpg",
+            status: "Inactive",
+            role: "Read"
+        },
+        {
+            id: uuidv4(),
+            first_name: 'John12',
+            last_name: 'Wick12',
+            email: 'john12@example.com',
+            avatar: "https://reqres.in/img/faces/12-image.jpg",
+            status: "Inactive",
+            role: "Read"
         }
     ]
 };
-const reducer = (state=initialState,action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case "ADD_SELECTED_USER" : return {...state,selectedUser: action.payload};
-        case "REMOVE_SELECTED_USER" : return {...state,selectedUser: null};
-        case "DELETE_USER": 
+        case "ADD_SELECTED_USER": return { ...state, selectedUser: action.payload };
+        case "REMOVE_SELECTED_USER": return { ...state, selectedUser: null };
+        case "DELETE_USER":
             let selectUser = state.selectedUser;
-            if (state.selectedUser.id === action.payload) {
+            if (selectUser.id === action.payload) {
                 selectUser = null;
             }
             let userList = state.users;
             userList = userList.filter((user) => {
                 return !(user.id === action.payload)
             })
-            return {...state,users: userList,selectedUser: selectUser};
-        // case 'FETCH_USERS': {users: [...state.users,action.payload]}
-        // case 'LOADED': return {...state,loading: action.task}
+            return { ...state, users: userList, selectedUser: selectUser };
+        case "UPDATE_STATUS":
+            let selectedUser = {...state.selectedUser};
+            if (selectedUser.id === action.payload.id) {
+                selectedUser.status = action.payload.status
+            }
+            let usersList = [...state.users];
+            usersList.forEach((user, index) => {
+                if (user.id === action.payload.id) {
+                    usersList[index].status = action.payload.status;
+                }
+            });
+            return { ...state, users: usersList, selectedUser: selectedUser };
+        case "UPDATE_ROLE":
+            let usrList = [...state.users];
+            usrList.forEach((user, index) => {
+                if (user.id === action.payload.id) {
+                    usrList[index].role = action.payload.role;
+                }
+            });
+            return { ...state, users: usrList }
         default: return state;
     }
 }

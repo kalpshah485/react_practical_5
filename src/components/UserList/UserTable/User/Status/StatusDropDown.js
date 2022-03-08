@@ -1,14 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { updateStatus } from '../../../../../redux/actions';
 
-function StatusDropDown({ status }) {
+function StatusDropDown({ user }) {
+    const dispatch = useDispatch();
     return (
         <div className="dropdown">
             <button className="btn btn-white dropdown-toggle" type="button" id="statusDropDown" data-bs-toggle="dropdown" aria-expanded="false">
-                {status}
+                <small>
+                    {user.status}
+                </small>
             </button>
             <ul className="dropdown-menu" aria-labelledby="statusDropDown">
-                <li><div className="dropdown-item" onClick={() => console.log("Active clicked")}>Active</div></li>
-                <li><div className="dropdown-item" onClick={() => console.log("Inactive clicked")}>Inactive</div></li>
+                <li>
+                    <div className="dropdown-item" onClick={() => dispatch(updateStatus(user, "Active"))}>
+                        <small>
+                            Active
+                        </small>
+                    </div>
+                </li>
+                <li>
+                    <div className="dropdown-item" onClick={() => dispatch(updateStatus(user, "Inactive"))}>
+                        <small>
+                            Inactive
+                        </small>
+                    </div>
+                </li>
             </ul>
         </div>
     )

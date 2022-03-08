@@ -2,7 +2,11 @@ import React from 'react'
 
 function Name({ first_name, last_name }) {
     return (
-        <div>{first_name + " " + last_name}</div>
+        <small>
+            <strong>
+                {first_name + " " + last_name}
+            </strong>
+        </small>
     )
 }
 
