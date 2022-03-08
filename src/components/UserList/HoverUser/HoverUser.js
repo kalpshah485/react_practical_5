@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Avatar from './Avatar';
-import Email from './Email';
-import Name from './Name';
+import Avatar from '../Avatar/Avatar';
+import Email from '../Email/Email';
+import Name from '../Name/Name';
 
 function HoverUser() {
     const user = useSelector(state => state.reducer.selectedUser);

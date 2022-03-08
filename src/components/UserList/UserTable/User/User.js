@@ -1,11 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { addSelectedUser } from '../redux/actions'
-import Avatar from './Avatar'
-import Email from './Email'
-import Name from './Name'
-import Role from './Role'
-import Status from './Status'
+import { addSelectedUser } from '../../../../redux/actions'
+import Avatar from '../../Avatar/Avatar'
+import Email from '../../Email/Email'
+import Name from '../../Name/Name'
+import Role from './Role/Role'
+import Status from './Status/Status'
 
 function User({ user }) {
     const dispatch = useDispatch();
