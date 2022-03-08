@@ -24,11 +24,11 @@ function User({ user }) {
                     </div>
                 </div>
             </td>
-            <td><Status status={user.status} /></td>
+            <td><Status user={user} /></td>
             <td>
                 <div className="row">
                     <div className="col">
-                        <Role role={user.role} />
+                        <Role user={user} />
                     </div>
                     <div className="col text-muted">
                         {user.role === 'Owner'? <LockBtn /> : <DeleteBtn user={user} /> }

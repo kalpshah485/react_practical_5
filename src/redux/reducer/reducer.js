@@ -77,22 +77,36 @@ var initialState = {
         }
     ]
 };
-const reducer = (state=initialState,action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case "ADD_SELECTED_USER" : return {...state,selectedUser: action.payload};
-        case "REMOVE_SELECTED_USER" : return {...state,selectedUser: null};
-        case "DELETE_USER": 
+        case "ADD_SELECTED_USER": return { ...state, selectedUser: action.payload };
+        case "REMOVE_SELECTED_USER": return { ...state, selectedUser: null };
+        case "DELETE_USER":
             let selectUser = state.selectedUser;
-            if (state.selectedUser.id === action.payload) {
+            if (selectUser.id === action.payload) {
                 selectUser = null;
             }
             let userList = state.users;
             userList = userList.filter((user) => {
                 return !(user.id === action.payload)
             })
-            return {...state,users: userList,selectedUser: selectUser};
-        // case 'FETCH_USERS': {users: [...state.users,action.payload]}
-        // case 'LOADED': return {...state,loading: action.task}
+            return { ...state, users: userList, selectedUser: selectUser };
+        case "UPDATE_STATUS":
+            let usersList = [...state.users];
+            usersList.forEach((user, index) => {
+                if (user.id === action.payload.id) {
+                    usersList[index].status = action.payload.status;
+                }
+            });
+            return { ...state, users: usersList }
+        case "UPDATE_ROLE":
+            let usrList = [...state.users];
+            usrList.forEach((user, index) => {
+                if (user.id === action.payload.id) {
+                    usrList[index].role = action.payload.role;
+                }
+            });
+            return { ...state, users: usrList }
         default: return state;
     }
 }

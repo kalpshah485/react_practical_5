@@ -2,11 +2,11 @@ import React from 'react'
 
 import RoleDropDown from './RoleDropDown'
 
-function Role({ role }) {
-  if (role === "Owner") {
-    return (role);
+function Role({ user }) {
+  if (user.role === "Owner") {
+    return (user.role);
   } else {
-    return (<RoleDropDown role={role} />);
+    return (<RoleDropDown user={user} />);
   }
 }
 

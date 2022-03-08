@@ -8,7 +8,7 @@ function UserList() {
                 <div className="col-8">
                     <UserTable />
                 </div>
-                <div className="col-4">
+                <div className="col">
                     <HoverUser />                    
                 </div>
             </div>
